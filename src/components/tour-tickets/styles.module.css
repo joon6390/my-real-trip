@@ -4,3 +4,768 @@
   width: 100%;
 }
 
+/* 검색 섹션 */
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 28px 0;
+  background-color: #2b96ed;
+}
+
+.searchBorder {
+  display: flex;
+  width: 416px;
+  padding: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.searchInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 416px;
+  min-height: 56px;
+  padding: 16px 20px;
+  background-color: rgba(245, 246, 255, 0.15);
+  border-radius: 7px;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.searchText {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.9453125px;
+  line-height: 16.734375px;
+  color: #ffffff;
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+}
+
+/* 지역 링크 섹션 */
+.regionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+}
+
+.regionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 20px;
+  gap: 16px;
+}
+
+.regionLinks {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.regionLink {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  height: 107px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.regionImageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.regionImage {
+  width: 100%;
+  height: 100%;
+  background-color: #dee2e6;
+}
+
+.regionGradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: -100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4) 40%,
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.regionTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: -33px;
+  padding-left: 16px;
+  padding-bottom: 20px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16.875px;
+  line-height: 19.8px;
+  letter-spacing: -0.2px;
+  color: #343a40;
+}
+
+/* 광고 배너 섹션 */
+.adSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.adContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1060px;
+  padding: 0 20px;
+}
+
+.adBanner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 176.66px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #dee2e6;
+}
+
+.adBackgroundWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 176.66px;
+  margin-top: -176.66px;
+}
+
+.adBackground {
+  width: 100%;
+  height: 176.66px;
+  background-color: #dee2e6;
+}
+
+.adOverlay {
+  display: flex;
+  width: 100%;
+  height: 176.66px;
+  margin-top: -176.66px;
+  background: linear-gradient(
+    to bottom,
+    transparent 58.64%,
+    rgba(0, 0, 0, 0.08) 77.12%,
+    rgba(0, 0, 0, 0.4) 95.97%
+  );
+  pointer-events: none;
+}
+
+.adTopRight {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: -176.66px;
+  padding-top: 8px;
+  padding-right: 37px;
+  pointer-events: none;
+}
+
+.adPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 16px;
+  background-color: rgba(20, 23, 25, 0.7);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16.9px;
+  letter-spacing: -0.26px;
+  color: #ffffff;
+  pointer-events: auto;
+}
+
+.adBottomRight {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 1;
+  padding-bottom: 40px;
+  padding-right: 46px;
+  pointer-events: none;
+}
+
+.adLabel {
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.0859375px;
+  line-height: 16.12px;
+  letter-spacing: -0.26px;
+  color: #f1f3f5;
+}
+
+/* 섹션 헤더 */
+.sectionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1060px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22.6875px;
+  line-height: 26.4px;
+  letter-spacing: -0.2px;
+  color: #343a40;
+  margin: 0;
+}
+
+.moreLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 13.34375px;
+  line-height: 14px;
+  letter-spacing: -0.2px;
+  color: #666d75;
+  text-decoration: none;
+}
+
+/* 투어 섹션 */
+.tourSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 48px 0;
+}
+
+.tourContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 20px;
+  gap: 16px;
+}
+
+.tourCards {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.tourCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  height: 311px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.tourCardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 166px;
+}
+
+.tourCardImage {
+  width: 100%;
+  height: 166px;
+  background-color: #dee2e6;
+}
+
+.tourCardBadgeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: -166px;
+  padding-top: 8px;
+  padding-right: 16px;
+  pointer-events: none;
+}
+
+.tourCardBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16.12px;
+  letter-spacing: -0.26px;
+  color: #ffffff;
+}
+
+.tourCardBadgeSpecialContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: -31px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+  pointer-events: none;
+}
+
+.tourCardBadgeSpecial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #e7f4fd;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.25px;
+  line-height: 18px;
+  color: #1583db;
+}
+
+.tourCardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+  background-color: #ffffff;
+  gap: 8px;
+}
+
+.tourCardCategory {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 11.25px;
+  line-height: 13.5px;
+  letter-spacing: -0.2px;
+  color: #848c94;
+}
+
+.tourCardTitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13.9453125px;
+  line-height: 22.05px;
+  letter-spacing: -0.2px;
+  color: #343a40;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tourCardRating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #ffc107;
+}
+
+.ratingCount {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 12px;
+  line-height: 12px;
+  color: #848c94;
+}
+
+.tourCardPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.price {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #666d75;
+}
+
+.currency {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  color: #666d75;
+}
+
+.perPerson {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 11.0625px;
+  line-height: 12px;
+  color: #848c94;
+}
+
+/* 티켓 섹션 */
+.ticketSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 48px 0;
+}
+
+.ticketContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 20px;
+  gap: 16px;
+}
+
+.ticketCards {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.ticketCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  height: 311px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.ticketCardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 166px;
+}
+
+.ticketCardImage {
+  width: 100%;
+  height: 166px;
+  background-color: #dee2e6;
+}
+
+.ticketCardBadgeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: -166px;
+  padding-top: 8px;
+  padding-right: 16px;
+  pointer-events: none;
+}
+
+.ticketCardBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16.12px;
+  letter-spacing: -0.26px;
+  color: #ffffff;
+}
+
+.ticketCardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+  background-color: #ffffff;
+  gap: 8px;
+}
+
+.ticketCardCategory {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 10.875px;
+  line-height: 13.05px;
+  letter-spacing: -0.2px;
+  color: #848c94;
+}
+
+.ticketCardTitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14.1796875px;
+  line-height: 22.05px;
+  letter-spacing: -0.2px;
+  color: #343a40;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ticketCardRating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.ticketCardPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 2px;
+}
+
+/* 치앙마이 섹션 */
+.chiangmaiSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 48px 0;
+}
+
+.chiangmaiContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 20px;
+  gap: 16px;
+}
+
+.chiangmaiCards {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.chiangmaiCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  height: 311px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.chiangmaiCardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 166px;
+}
+
+.chiangmaiCardImage {
+  width: 100%;
+  height: 166px;
+  background-color: #dee2e6;
+}
+
+.chiangmaiCardBadgeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: -166px;
+  padding-top: 8px;
+  padding-right: 16px;
+  pointer-events: none;
+}
+
+.chiangmaiCardBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16.12px;
+  letter-spacing: -0.26px;
+  color: #ffffff;
+}
+
+.chiangmaiCardSpecialContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: -27px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+  pointer-events: none;
+}
+
+.chiangmaiCardSpecial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #fff1f4;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.25px;
+  line-height: 18px;
+  color: #ff4edb;
+}
+
+.chiangmaiCardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+  background-color: #ffffff;
+  gap: 8px;
+}
+
+.chiangmaiCardCategory {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 11.25px;
+  line-height: 13.5px;
+  letter-spacing: -0.2px;
+  color: #848c94;
+}
+
+.chiangmaiCardTitle {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14.1796875px;
+  line-height: 22.05px;
+  letter-spacing: -0.2px;
+  color: #343a40;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chiangmaiCardRating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.chiangmaiCardPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 2px;
+}
+
+/* 공통 버튼 */
+.nextButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
