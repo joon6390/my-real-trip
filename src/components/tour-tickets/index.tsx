@@ -132,19 +132,19 @@ export default function TourTickets() {
           </h2>
           <a href="#" className={styles.moreLink}>
             더 보기{" "}
-            <Image
-              src="/icons/more2.png"
-              alt="more"
-              width={7}
-              height={10}
-            />
+            <Image src="/icons/more2.png" alt="more" width={7} height={10} />
           </a>
         </div>
         <div className={styles.tourContainer}>
           <div className={styles.tourCards}>
             <a href="#" className={styles.tourCard}>
               <div className={styles.tourCardImageWrapper}>
-                <div className={styles.tourCardImage}></div>
+                <Image
+                  src="/images/Image5.png"
+                  alt="이토시마 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.tourCardBadgeContainer}>
                   <div className={styles.tourCardBadge}>
                     <Image
@@ -176,7 +176,12 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.tourCard}>
               <div className={styles.tourCardImageWrapper}>
-                <div className={styles.tourCardImage}></div>
+                <Image
+                  src="/images/Image6.png"
+                  alt="이토시마 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.tourCardBadgeContainer}>
                   <div className={styles.tourCardBadge}>
                     <Image
@@ -207,7 +212,12 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.tourCard}>
               <div className={styles.tourCardImageWrapper}>
-                <div className={styles.tourCardImage}></div>
+                <Image
+                  src="/images/Image7.png"
+                  alt="이토시마 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.tourCardBadgeContainer}>
                   <div className={styles.tourCardBadge}>
                     <Image
@@ -218,9 +228,6 @@ export default function TourTickets() {
                     />
                     <span>197</span>
                   </div>
-                </div>
-                <div className={styles.tourCardBadgeSpecialContainer}>
-                  <div className={styles.tourCardBadgeSpecial}>무료취소</div>
                 </div>
               </div>
               <div className={styles.tourCardContent}>
@@ -242,7 +249,12 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.tourCard}>
               <div className={styles.tourCardImageWrapper}>
-                <div className={styles.tourCardImage}></div>
+                <Image
+                  src="/images/Image8.png"
+                  alt="이토시마 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.tourCardBadgeContainer}>
                   <div className={styles.tourCardBadge}>
                     <Image
@@ -272,10 +284,18 @@ export default function TourTickets() {
                 </div>
               </div>
             </a>
-            <a href="#" className={styles.tourCard}>
-              <div className={styles.tourCardImage}></div>
+            <a href="#">
+              <div></div>
             </a>
           </div>
+          <button className={styles.tourNextButton}>
+            <Image
+              src="/icons/Button-Next-slide.png"
+              alt="next"
+              width={40}
+              height={40}
+            />
+          </button>
         </div>
       </section>
 
@@ -285,22 +305,19 @@ export default function TourTickets() {
           <h2 className={styles.sectionTitle}>25/26시즌 EPL 티켓 모아보기✨</h2>
           <a href="#" className={styles.moreLink}>
             더 보기{" "}
-            <Image
-              src="/icons/more2.png"
-              alt="more"
-              width={7}
-              height={10}
-            />
+            <Image src="/icons/more2.png" alt="more" width={7} height={10} />
           </a>
         </div>
         <div className={styles.ticketContainer}>
           <div className={styles.ticketCards}>
             <a href="#" className={styles.ticketCard}>
               <div className={styles.ticketCardImageWrapper}>
-                <div className={styles.ticketCardImage}></div>
-                <div className={styles.ticketCardBadgeContainer}>
-                  <div className={styles.ticketCardBadge}>891</div>
-                </div>
+                <Image
+                  src="/images/Image13.png"
+                  alt="EPL 티켓"
+                  width={250}
+                  height={166}
+                />
               </div>
               <div className={styles.ticketCardContent}>
                 <div className={styles.ticketCardCategory}>
@@ -323,10 +340,12 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.ticketCard}>
               <div className={styles.ticketCardImageWrapper}>
-                <div className={styles.ticketCardImage}></div>
-                <div className={styles.ticketCardBadgeContainer}>
-                  <div className={styles.ticketCardBadge}>1995</div>
-                </div>
+                <Image
+                  src="/images/Image14.png"
+                  alt="EPL 티켓"
+                  width={250}
+                  height={166}
+                />
               </div>
               <div className={styles.ticketCardContent}>
                 <div className={styles.ticketCardCategory}>
@@ -348,10 +367,12 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.ticketCard}>
               <div className={styles.ticketCardImageWrapper}>
-                <div className={styles.ticketCardImage}></div>
-                <div className={styles.ticketCardBadgeContainer}>
-                  <div className={styles.ticketCardBadge}>181</div>
-                </div>
+                <Image
+                  src="/images/image.png"
+                  alt="EPL 티켓"
+                  width={250}
+                  height={166}
+                />
               </div>
               <div className={styles.ticketCardContent}>
                 <div className={styles.ticketCardCategory}>
@@ -373,9 +394,22 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.ticketCard}>
               <div className={styles.ticketCardImageWrapper}>
-                <div className={styles.ticketCardImage}></div>
+                <Image
+                  src="/images/Image15.png"
+                  alt="EPL 티켓"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.ticketCardBadgeContainer}>
-                  <div className={styles.ticketCardBadge}>40</div>
+                  <div className={styles.ticketCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>40</span>
+                  </div>
                 </div>
               </div>
               <div className={styles.ticketCardContent}>
@@ -396,10 +430,18 @@ export default function TourTickets() {
                 </div>
               </div>
             </a>
-            <a href="#" className={styles.ticketCard}>
+            <a href="#">
               <div className={styles.ticketCardImage}></div>
             </a>
           </div>
+          <button className={styles.tourNextButton}>
+            <Image
+              src="/icons/Button-Next-slide.png"
+              alt="next"
+              width={40}
+              height={40}
+            />
+          </button>
         </div>
       </section>
 
@@ -411,21 +453,29 @@ export default function TourTickets() {
           </h2>
           <a href="#" className={styles.moreLink}>
             더 보기{" "}
-            <Image
-              src="/icons/more2.png"
-              alt="more"
-              width={7}
-              height={10}
-            />
+            <Image src="/icons/more2.png" alt="more" width={7} height={10} />
           </a>
         </div>
         <div className={styles.chiangmaiContainer}>
           <div className={styles.chiangmaiCards}>
             <a href="#" className={styles.chiangmaiCard}>
               <div className={styles.chiangmaiCardImageWrapper}>
-                <div className={styles.chiangmaiCardImage}></div>
+                <Image
+                  src="/images/Image9.png"
+                  alt="치앙마이 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.chiangmaiCardBadgeContainer}>
-                  <div className={styles.chiangmaiCardBadge}>3281</div>
+                  <div className={styles.chiangmaiCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>3281</span>
+                  </div>
                 </div>
                 <div className={styles.chiangmaiCardSpecialContainer}>
                   <div className={styles.chiangmaiCardSpecial}>7월 특가</div>
@@ -452,9 +502,22 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.chiangmaiCard}>
               <div className={styles.chiangmaiCardImageWrapper}>
-                <div className={styles.chiangmaiCardImage}></div>
+                <Image
+                  src="/images/Image10.png"
+                  alt="치앙마이 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.chiangmaiCardBadgeContainer}>
-                  <div className={styles.chiangmaiCardBadge}>771</div>
+                  <div className={styles.chiangmaiCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>771</span>
+                  </div>
                 </div>
                 <div className={styles.chiangmaiCardSpecialContainer}>
                   <div className={styles.chiangmaiCardSpecial}>7월 특가</div>
@@ -480,9 +543,22 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.chiangmaiCard}>
               <div className={styles.chiangmaiCardImageWrapper}>
-                <div className={styles.chiangmaiCardImage}></div>
+                <Image
+                  src="/images/Image11.png"
+                  alt="치앙마이 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.chiangmaiCardBadgeContainer}>
-                  <div className={styles.chiangmaiCardBadge}>415</div>
+                  <div className={styles.chiangmaiCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>415</span>
+                  </div>
                 </div>
                 <div className={styles.chiangmaiCardSpecialContainer}>
                   <div className={styles.chiangmaiCardSpecial}>7월 특가</div>
@@ -509,9 +585,22 @@ export default function TourTickets() {
             </a>
             <a href="#" className={styles.chiangmaiCard}>
               <div className={styles.chiangmaiCardImageWrapper}>
-                <div className={styles.chiangmaiCardImage}></div>
+                <Image
+                  src="/images/Image12.png"
+                  alt="치앙마이 투어"
+                  width={250}
+                  height={166}
+                />
                 <div className={styles.chiangmaiCardBadgeContainer}>
-                  <div className={styles.chiangmaiCardBadge}>723</div>
+                  <div className={styles.chiangmaiCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>723</span>
+                  </div>
                 </div>
                 <div className={styles.chiangmaiCardSpecialContainer}>
                   <div className={styles.chiangmaiCardSpecial}>7월 특가</div>
@@ -536,13 +625,21 @@ export default function TourTickets() {
                 </div>
               </div>
             </a>
-            <a href="#" className={styles.chiangmaiCard}>
+            <a href="#">
               <div className={styles.chiangmaiCardImage}></div>
             </a>
-            <a href="#" className={styles.chiangmaiCard}>
+            <a href="#">
               <div className={styles.chiangmaiCardImage}></div>
             </a>
           </div>
+          <button className={styles.tourNextButton}>
+            <Image
+              src="/icons/Button-Next-slide.png"
+              alt="next"
+              width={40}
+              height={40}
+            />
+          </button>
         </div>
       </section>
     </div>

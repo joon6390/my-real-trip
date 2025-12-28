@@ -174,7 +174,7 @@
   margin-top: -33px;
   padding-left: 16px;
   padding-bottom: 20px;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16.875px;
@@ -256,7 +256,7 @@
 
 .adLabel {
   display: flex;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12.0859375px;
@@ -273,12 +273,11 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1060px;
-  padding: 0 20px;
   margin-bottom: 20px;
 }
 
 .sectionTitle {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 22.6875px;
@@ -293,7 +292,7 @@
   flex-direction: row;
   align-items: center;
   gap: 6px;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 13.34375px;
@@ -315,18 +314,42 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  max-width: 1620px;
-  padding: 0 20px;
-  gap: 16px;
+  width: 1080px;
+  height: 321px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .tourCards {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  width: 1080px;
+  height: 321px;
   gap: 20px;
-  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.tourNextButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: -30px;
+}
+
+.tourNextButton img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .tourCard {
@@ -335,7 +358,7 @@
   min-width: 250px;
   height: 311px;
   border-radius: 4px;
-  overflow: hidden;
+  border: 1px solid #dee2e6;
   text-decoration: none;
 }
 
@@ -346,12 +369,6 @@
   height: 166px;
 }
 
-.tourCardImage {
-  width: 100%;
-  height: 166px;
-  background-color: #dee2e6;
-}
-
 .tourCardBadgeContainer {
   display: flex;
   flex-direction: row;
@@ -359,20 +376,18 @@
   justify-content: flex-end;
   margin-top: -166px;
   padding-top: 8px;
-  padding-right: 16px;
   pointer-events: none;
 }
 
 .tourCardBadge {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
   padding: 4px 8px;
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -387,32 +402,6 @@
   object-fit: contain;
 }
 
-.tourCardBadgeSpecialContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
-  margin-top: -31px;
-  padding-right: 14px;
-  padding-bottom: 8px;
-  pointer-events: none;
-}
-
-.tourCardBadgeSpecial {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: #e7f4fd;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 11.25px;
-  line-height: 18px;
-  color: #1583db;
-}
-
 .tourCardContent {
   display: flex;
   flex-direction: column;
@@ -423,7 +412,7 @@
 }
 
 .tourCardCategory {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 11.25px;
@@ -433,7 +422,7 @@
 }
 
 .tourCardTitle {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 13.9453125px;
@@ -455,16 +444,16 @@
 }
 
 .stars {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 12px;
-  color: #ffc107;
+  color: #0066ff;
 }
 
 .ratingCount {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 12px;
@@ -480,7 +469,7 @@
 }
 
 .price {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -489,7 +478,7 @@
 }
 
 .currency {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -498,7 +487,7 @@
 }
 
 .perPerson {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 11.0625px;
@@ -519,18 +508,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  max-width: 1620px;
-  padding: 0 20px;
-  gap: 16px;
+  width: 1080px;
+  height: 321px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .ticketCards {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  width: 1080px;
+  height: 321px;
   gap: 20px;
-  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
 }
 
 .ticketCard {
@@ -539,7 +531,7 @@
   min-width: 250px;
   height: 311px;
   border-radius: 4px;
-  overflow: hidden;
+  border: 1px solid #dee2e6;
   text-decoration: none;
 }
 
@@ -563,24 +555,30 @@
   justify-content: flex-end;
   margin-top: -166px;
   padding-top: 8px;
-  padding-right: 16px;
   pointer-events: none;
 }
 
 .ticketCardBadge {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   padding: 4px 8px;
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 16.12px;
   letter-spacing: -0.26px;
   color: #ffffff;
+}
+
+.ticketCardBadge img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .ticketCardContent {
@@ -593,7 +591,7 @@
 }
 
 .ticketCardCategory {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 10.875px;
@@ -603,7 +601,7 @@
 }
 
 .ticketCardTitle {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14.1796875px;
@@ -644,18 +642,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  max-width: 1620px;
-  padding: 0 20px;
-  gap: 16px;
+  width: 1080px;
+  height: 321px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .chiangmaiCards {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  width: 1080px;
+  height: 321px;
   gap: 20px;
-  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
 }
 
 .chiangmaiCard {
@@ -664,7 +665,7 @@
   min-width: 250px;
   height: 311px;
   border-radius: 4px;
-  overflow: hidden;
+  border: 1px solid #dee2e6;
   text-decoration: none;
 }
 
@@ -688,18 +689,23 @@
   justify-content: flex-end;
   margin-top: -166px;
   padding-top: 8px;
-  padding-right: 16px;
   pointer-events: none;
+}
+
+.chiangmaiCards .chiangmaiCard:nth-child(3) .chiangmaiCardBadgeContainer,
+.chiangmaiCards .chiangmaiCard:nth-child(4) .chiangmaiCardBadgeContainer {
+  padding-top: 0;
 }
 
 .chiangmaiCardBadge {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   padding: 4px 8px;
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -708,13 +714,19 @@
   color: #ffffff;
 }
 
+.chiangmaiCardBadge img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .chiangmaiCardSpecialContainer {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-top: -27px;
-  padding-right: 14px;
+  margin-top: 70px;
+  padding-right: 5px;
   padding-bottom: 8px;
   pointer-events: none;
 }
@@ -726,7 +738,7 @@
   padding: 4px 8px;
   border-radius: 4px;
   background-color: #fff1f4;
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 11.25px;
@@ -744,7 +756,7 @@
 }
 
 .chiangmaiCardCategory {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 350;
   font-size: 11.25px;
@@ -754,7 +766,7 @@
 }
 
 .chiangmaiCardTitle {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14.1796875px;
@@ -781,4 +793,3 @@
   align-items: baseline;
   gap: 2px;
 }
-
