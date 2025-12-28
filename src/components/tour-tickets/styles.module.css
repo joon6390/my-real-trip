@@ -10,8 +10,10 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 28px 0;
+  min-height: 243px;
   background-color: #2b96ed;
+  padding-top: 50px;
+  overflow: visible;
 }
 
 .searchBorder {
@@ -27,9 +29,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 416px;
-  min-height: 56px;
-  padding: 16px 20px;
+  width: 414px;
+  height: 54px;
+  padding: 0 20px;
   background-color: rgba(245, 246, 255, 0.15);
   border-radius: 7px;
 }
@@ -41,7 +43,7 @@
 }
 
 .searchText {
-  font-family: Inter, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13.9453125px;
@@ -55,7 +57,23 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.regionContainerInSearch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1080px;
+  height: 126px;
+  padding: 0;
+  gap: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40px;
+  z-index: 1;
 }
 
 /* 지역 링크 섹션 */
@@ -80,15 +98,17 @@
 .regionLinks {
   display: flex;
   flex-direction: row;
-  flex: 1;
-  gap: 20px;
-  overflow-x: auto;
+  width: 1080px;
+  height: 126px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .regionLink {
   display: flex;
   flex-direction: column;
-  min-width: 160px;
+  width: 160px;
   height: 107px;
   border-radius: 4px;
   overflow: hidden;
@@ -105,7 +125,7 @@
 .regionImage {
   width: 100%;
   height: 100%;
-  background-color: #dee2e6;
+  object-fit: cover;
 }
 
 .regionGradient {
@@ -119,6 +139,32 @@
     transparent 68%
   );
   pointer-events: none;
+}
+
+/* 공통 버튼 */
+.nextButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.nextButton img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .regionTitle {
@@ -143,7 +189,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .adContainer {
@@ -157,32 +203,35 @@
 .adBanner {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
-  min-height: 176.66px;
+  height: 170px;
   border-radius: 12px;
   overflow: hidden;
   background-color: #dee2e6;
 }
 
 .adBackgroundWrapper {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 176.66px;
-  margin-top: -176.66px;
+  height: 100%;
+  z-index: 0;
 }
 
 .adBackground {
   width: 100%;
-  height: 176.66px;
-  background-color: #dee2e6;
+  height: 100%;
+  object-fit: cover;
 }
 
 .adOverlay {
-  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 176.66px;
-  margin-top: -176.66px;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     transparent 58.64%,
@@ -190,45 +239,19 @@
     rgba(0, 0, 0, 0.4) 95.97%
   );
   pointer-events: none;
-}
-
-.adTopRight {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  margin-top: -176.66px;
-  padding-top: 8px;
-  padding-right: 37px;
-  pointer-events: none;
-}
-
-.adPagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  border-radius: 16px;
-  background-color: rgba(20, 23, 25, 0.7);
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 16.9px;
-  letter-spacing: -0.26px;
-  color: #ffffff;
-  pointer-events: auto;
+  z-index: 1;
 }
 
 .adBottomRight {
+  position: absolute;
+  bottom: 40px;
+  right: 46px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
-  flex: 1;
-  padding-bottom: 40px;
-  padding-right: 46px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .adLabel {
@@ -286,7 +309,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 48px 0;
 }
 
 .tourContainer {
@@ -343,8 +365,10 @@
 
 .tourCardBadge {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   padding: 4px 8px;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -355,6 +379,12 @@
   line-height: 16.12px;
   letter-spacing: -0.26px;
   color: #ffffff;
+}
+
+.tourCardBadge img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .tourCardBadgeSpecialContainer {
@@ -752,20 +782,3 @@
   gap: 2px;
 }
 
-/* 공통 버튼 */
-.nextButton {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  border-radius: 20px;
-  background-color: #ffffff;
-  font-size: 20px;
-  cursor: pointer;
-  flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}

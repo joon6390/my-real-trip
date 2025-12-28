@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 export default function TourTickets() {
   return (
@@ -13,68 +14,93 @@ export default function TourTickets() {
                 &quot;싹쓸이위크&quot; 중국홍콩대만 초특가
               </span>
             </div>
-            <div className={styles.searchIcon}>🔍</div>
+            <div className={styles.searchIcon}>
+              <Image
+                src="/icons/search-white.png"
+                alt="search"
+                width={24}
+                height={24}
+              />
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* 지역 링크 섹션 */}
-      <section className={styles.regionSection}>
-        <div className={styles.regionContainer}>
+        <div className={styles.regionContainerInSearch}>
           <div className={styles.regionLinks}>
             <a href="#" className={styles.regionLink}>
               <div className={styles.regionImageWrapper}>
-                <div className={styles.regionImage}></div>
-                <div className={styles.regionGradient}></div>
-                <h3 className={styles.regionTitle}>바르셀로나</h3>
+                <Image
+                  src="/images/Barcelona.png"
+                  alt="바르셀로나"
+                  width={160}
+                  height={107}
+                  className={styles.regionImage}
+                />
               </div>
             </a>
             <a href="#" className={styles.regionLink}>
               <div className={styles.regionImageWrapper}>
-                <div className={styles.regionImage}></div>
-                <div className={styles.regionGradient}></div>
-                <h3 className={styles.regionTitle}>도쿄</h3>
+                <Image
+                  src="/images/Tokyo.png"
+                  alt="도쿄"
+                  width={160}
+                  height={107}
+                  className={styles.regionImage}
+                />
               </div>
             </a>
             <a href="#" className={styles.regionLink}>
               <div className={styles.regionImageWrapper}>
-                <div className={styles.regionImage}></div>
-                <div className={styles.regionGradient}></div>
-                <h3 className={styles.regionTitle}>방콕</h3>
+                <Image
+                  src="/images/Bangkok.png"
+                  alt="방콕"
+                  width={160}
+                  height={107}
+                  className={styles.regionImage}
+                />
               </div>
             </a>
             <a href="#" className={styles.regionLink}>
               <div className={styles.regionImageWrapper}>
-                <div className={styles.regionImage}></div>
-                <div className={styles.regionGradient}></div>
-                <h3 className={styles.regionTitle}>오사카</h3>
+                <Image
+                  src="/images/Osaka.png"
+                  alt="오사카"
+                  width={160}
+                  height={107}
+                  className={styles.regionImage}
+                />
               </div>
             </a>
             <a href="#" className={styles.regionLink}>
               <div className={styles.regionImageWrapper}>
-                <div className={styles.regionImage}></div>
-                <div className={styles.regionGradient}></div>
-                <h3 className={styles.regionTitle}>다낭</h3>
+                <Image
+                  src="/images/DaNang.png"
+                  alt="다낭"
+                  width={160}
+                  height={107}
+                  className={styles.regionImage}
+                />
               </div>
             </a>
             <a href="#" className={styles.regionLink}>
               <div className={styles.regionImageWrapper}>
-                <div className={styles.regionImage}></div>
-                <div className={styles.regionGradient}></div>
-                <h3 className={styles.regionTitle}>파리</h3>
+                <Image
+                  src="/images/Paris.png"
+                  alt="파리"
+                  width={160}
+                  height={107}
+                  className={styles.regionImage}
+                />
               </div>
-            </a>
-            <a href="#" className={styles.regionLink}>
-              <div className={styles.regionImage}></div>
-            </a>
-            <a href="#" className={styles.regionLink}>
-              <div className={styles.regionImage}></div>
-            </a>
-            <a href="#" className={styles.regionLink}>
-              <div className={styles.regionImage}></div>
             </a>
           </div>
-          <button className={styles.nextButton}>→</button>
+          <button className={styles.nextButton}>
+            <Image
+              src="/icons/Button-Next-slide.png"
+              alt="next"
+              width={40}
+              height={40}
+            />
+          </button>
         </div>
       </section>
 
@@ -83,14 +109,16 @@ export default function TourTickets() {
         <div className={styles.adContainer}>
           <div className={styles.adBanner}>
             <div className={styles.adBackgroundWrapper}>
-              <div className={styles.adBackground}></div>
+              <Image
+                src="/images/banner.png"
+                alt="광고 배너"
+                fill
+                className={styles.adBackground}
+              />
               <div className={styles.adOverlay}></div>
             </div>
-            <div className={styles.adTopRight}>
-              <div className={styles.adPagination}>2/43</div>
-            </div>
             <div className={styles.adBottomRight}>
-              <div className={styles.adLabel}>광고</div>
+              <div className={styles.adLabel}></div>
             </div>
           </div>
         </div>
@@ -103,7 +131,13 @@ export default function TourTickets() {
             🌊여름 강추 여행,이토시마 투어🌴
           </h2>
           <a href="#" className={styles.moreLink}>
-            더 보기 →
+            더 보기{" "}
+            <Image
+              src="/icons/more2.png"
+              alt="more"
+              width={7}
+              height={10}
+            />
           </a>
         </div>
         <div className={styles.tourContainer}>
@@ -112,7 +146,15 @@ export default function TourTickets() {
               <div className={styles.tourCardImageWrapper}>
                 <div className={styles.tourCardImage}></div>
                 <div className={styles.tourCardBadgeContainer}>
-                  <div className={styles.tourCardBadge}>4441</div>
+                  <div className={styles.tourCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>4441</span>
+                  </div>
                 </div>
               </div>
               <div className={styles.tourCardContent}>
@@ -136,7 +178,15 @@ export default function TourTickets() {
               <div className={styles.tourCardImageWrapper}>
                 <div className={styles.tourCardImage}></div>
                 <div className={styles.tourCardBadgeContainer}>
-                  <div className={styles.tourCardBadge}>919</div>
+                  <div className={styles.tourCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>919</span>
+                  </div>
                 </div>
               </div>
               <div className={styles.tourCardContent}>
@@ -159,7 +209,15 @@ export default function TourTickets() {
               <div className={styles.tourCardImageWrapper}>
                 <div className={styles.tourCardImage}></div>
                 <div className={styles.tourCardBadgeContainer}>
-                  <div className={styles.tourCardBadge}>197</div>
+                  <div className={styles.tourCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>197</span>
+                  </div>
                 </div>
                 <div className={styles.tourCardBadgeSpecialContainer}>
                   <div className={styles.tourCardBadgeSpecial}>무료취소</div>
@@ -186,7 +244,15 @@ export default function TourTickets() {
               <div className={styles.tourCardImageWrapper}>
                 <div className={styles.tourCardImage}></div>
                 <div className={styles.tourCardBadgeContainer}>
-                  <div className={styles.tourCardBadge}>296</div>
+                  <div className={styles.tourCardBadge}>
+                    <Image
+                      src="/icons/bookmark.png"
+                      alt="bookmark"
+                      width={24}
+                      height={24}
+                    />
+                    <span>296</span>
+                  </div>
                 </div>
               </div>
               <div className={styles.tourCardContent}>
@@ -210,7 +276,6 @@ export default function TourTickets() {
               <div className={styles.tourCardImage}></div>
             </a>
           </div>
-          <button className={styles.nextButton}>→</button>
         </div>
       </section>
 
@@ -219,7 +284,13 @@ export default function TourTickets() {
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>25/26시즌 EPL 티켓 모아보기✨</h2>
           <a href="#" className={styles.moreLink}>
-            더 보기 →
+            더 보기{" "}
+            <Image
+              src="/icons/more2.png"
+              alt="more"
+              width={7}
+              height={10}
+            />
           </a>
         </div>
         <div className={styles.ticketContainer}>
@@ -329,7 +400,6 @@ export default function TourTickets() {
               <div className={styles.ticketCardImage}></div>
             </a>
           </div>
-          <button className={styles.nextButton}>→</button>
         </div>
       </section>
 
@@ -340,7 +410,13 @@ export default function TourTickets() {
             ✨치앙마이 자유여행 단독 특가 오픈✨
           </h2>
           <a href="#" className={styles.moreLink}>
-            더 보기 →
+            더 보기{" "}
+            <Image
+              src="/icons/more2.png"
+              alt="more"
+              width={7}
+              height={10}
+            />
           </a>
         </div>
         <div className={styles.chiangmaiContainer}>
@@ -467,7 +543,6 @@ export default function TourTickets() {
               <div className={styles.chiangmaiCardImage}></div>
             </a>
           </div>
-          <button className={styles.nextButton}>→</button>
         </div>
       </section>
     </div>
