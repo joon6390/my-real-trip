@@ -112,7 +112,8 @@ export default function TourTickets() {
               <Image
                 src="/images/banner.png"
                 alt="광고 배너"
-                fill
+                width={1020}
+                height={170}
                 className={styles.adBackground}
               />
               <div className={styles.adOverlay}></div>
@@ -284,9 +285,6 @@ export default function TourTickets() {
                 </div>
               </div>
             </a>
-            <a href="#">
-              <div></div>
-            </a>
           </div>
           <button className={styles.tourNextButton}>
             <Image
@@ -383,7 +381,7 @@ export default function TourTickets() {
                 </h3>
                 <div className={styles.ticketCardRating}>
                   <div className={styles.stars}>★★★★★</div>
-                  <span className={styles.ratingCount}>-</span>
+                  <span className={styles.ratingCount}>10</span>
                 </div>
                 <div className={styles.ticketCardPrice}>
                   <span className={styles.price}>867,315</span>
@@ -429,9 +427,6 @@ export default function TourTickets() {
                   <span className={styles.perPerson}> / 1인</span>
                 </div>
               </div>
-            </a>
-            <a href="#">
-              <div className={styles.ticketCardImage}></div>
             </a>
           </div>
           <button className={styles.tourNextButton}>
@@ -624,12 +619,6 @@ export default function TourTickets() {
                   <span className={styles.perPerson}> / 1인</span>
                 </div>
               </div>
-            </a>
-            <a href="#">
-              <div className={styles.chiangmaiCardImage}></div>
-            </a>
-            <a href="#">
-              <div className={styles.chiangmaiCardImage}></div>
             </a>
           </div>
           <button className={styles.tourNextButton}>

@@ -12,7 +12,6 @@
   width: 100%;
   min-height: 243px;
   background-color: #2b96ed;
-  padding-top: 50px;
   overflow: visible;
 }
 
@@ -22,6 +21,7 @@
   padding: 1px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
+  margin-top: 60px;
 }
 
 .searchInput {
@@ -64,15 +64,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 1080px;
   height: 126px;
-  padding: 0;
+  padding: 0 45px;
   gap: 16px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  top: 40px;
+  margin-top: 40px;
+  margin-bottom: -40px;
   z-index: 1;
 }
 
@@ -98,11 +98,11 @@
 .regionLinks {
   display: flex;
   flex-direction: row;
-  width: 1080px;
+  width: 100%;
   height: 126px;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex: 1;
 }
 
 .regionLink {
@@ -147,23 +147,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
   flex-shrink: 0;
-  position: absolute;
-  right: 45px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: -60px;
   z-index: 2;
 }
 
 .nextButton img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -203,7 +200,6 @@
 .adBanner {
   display: flex;
   flex-direction: column;
-  position: relative;
   width: 100%;
   height: 170px;
   border-radius: 12px;
@@ -212,26 +208,25 @@
 }
 
 .adBackgroundWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 170px;
+  flex: 1;
   z-index: 0;
 }
 
 .adBackground {
   width: 100%;
-  height: 100%;
+  height: 170px;
   object-fit: cover;
 }
 
 .adOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
   width: 100%;
-  height: 100%;
+  height: 170px;
+  margin-top: -170px;
   background: linear-gradient(
     to bottom,
     transparent 58.64%,
@@ -243,15 +238,17 @@
 }
 
 .adBottomRight {
-  position: absolute;
-  bottom: 40px;
-  right: 46px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  margin-right: 46px;
   pointer-events: none;
   z-index: 2;
+  align-self: flex-end;
 }
 
 .adLabel {
@@ -308,6 +305,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 48px 0;
 }
 
 .tourContainer {
@@ -336,8 +334,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -347,8 +345,8 @@
 }
 
 .tourNextButton img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -374,7 +372,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
-  margin-top: -166px;
+  margin-top: -175px;
   padding-top: 8px;
   pointer-events: none;
 }
@@ -408,10 +406,19 @@
   flex: 1;
   padding: 16px;
   background-color: #ffffff;
-  gap: 8px;
 }
 
 .tourCardCategory {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 11.25px;
+  line-height: 13.5px;
+  letter-spacing: -0.2px;
+  color: #848c94;
+}
+
+.ticketCardCategory {
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 350;
@@ -425,11 +432,11 @@
   font-family: "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 13.9453125px;
+  font-size: 14.1796875px;
   line-height: 22.05px;
   letter-spacing: -0.2px;
   color: #343a40;
-  margin: 0;
+  margin: 0 0 25px 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -542,20 +549,18 @@
   height: 166px;
 }
 
-.ticketCardImage {
-  width: 100%;
-  height: 166px;
-  background-color: #dee2e6;
-}
-
 .ticketCardBadgeContainer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
-  margin-top: -166px;
+  margin-top: -175px;
   padding-top: 8px;
   pointer-events: none;
+}
+
+.ticketCards .ticketCard:nth-child(4) .ticketCardBadgeContainer {
+  padding-top: 0;
 }
 
 .ticketCardBadge {
@@ -587,17 +592,6 @@
   flex: 1;
   padding: 16px;
   background-color: #ffffff;
-  gap: 8px;
-}
-
-.ticketCardCategory {
-  font-family: "Noto Sans KR", sans-serif;
-  font-style: normal;
-  font-weight: 350;
-  font-size: 10.875px;
-  line-height: 13.05px;
-  letter-spacing: -0.2px;
-  color: #848c94;
 }
 
 .ticketCardTitle {
@@ -608,7 +602,7 @@
   line-height: 22.05px;
   letter-spacing: -0.2px;
   color: #343a40;
-  margin: 0;
+  margin: 0 0 25px 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -676,18 +670,12 @@
   height: 166px;
 }
 
-.chiangmaiCardImage {
-  width: 100%;
-  height: 166px;
-  background-color: #dee2e6;
-}
-
 .chiangmaiCardBadgeContainer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
-  margin-top: -166px;
+  margin-top: -175px;
   padding-top: 8px;
   pointer-events: none;
 }
@@ -725,7 +713,7 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-top: 70px;
+  margin-top: 80px;
   padding-right: 5px;
   padding-bottom: 8px;
   pointer-events: none;
@@ -752,7 +740,6 @@
   flex: 1;
   padding: 16px;
   background-color: #ffffff;
-  gap: 8px;
 }
 
 .chiangmaiCardCategory {
@@ -773,7 +760,7 @@
   line-height: 22.05px;
   letter-spacing: -0.2px;
   color: #343a40;
-  margin: 0;
+  margin: 0 0 25px 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
