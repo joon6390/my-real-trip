@@ -1,12 +1,17 @@
+"use client";
+
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const pathname = usePathname();
+  const isTourTicketsPage = pathname === "/tour-tickets";
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -60,8 +65,16 @@ export default function Layout({ children }: LayoutProps) {
             <a href="#" className={styles.navLink}>
               국내 숙소
             </a>
-            <a href="#" className={styles.navLink}>
+            <a
+              href="/tour-tickets"
+              className={`${styles.navLink} ${
+                isTourTicketsPage ? styles.navLinkActive : ""
+              }`}
+            >
               투어·티켓
+              {isTourTicketsPage && (
+                <span className={styles.activeIndicator}></span>
+              )}
             </a>
             <a href="#" className={styles.navLink}>
               해외여행보험
@@ -168,76 +181,76 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
               </div>
               <div className={styles.footerSocialApps}>
-              <div className={styles.footerSocialIcons}>
-                <a href="#" className={styles.footerSocialIcon}>
+                <div className={styles.footerSocialIcons}>
+                  <a href="#" className={styles.footerSocialIcon}>
+                    <Image
+                      src="/icons/facebook.png"
+                      alt="facebook"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                  <a href="#" className={styles.footerSocialIcon}>
+                    <Image
+                      src="/icons/naver.png"
+                      alt="naver"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                  <a href="#" className={styles.footerSocialIcon}>
+                    <Image
+                      src="/icons/instagram.png"
+                      alt="instagram"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                  <a href="#" className={styles.footerSocialIcon}>
+                    <Image
+                      src="/icons/youtube.png"
+                      alt="youtube"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                </div>
+                <div className={styles.footerDivider}></div>
+                <div className={styles.footerAppIcons}>
+                  <a href="#" className={styles.footerAppIcon}>
+                    <Image
+                      src="/icons/apple.png"
+                      alt="appstore"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                  <a href="#" className={styles.footerAppIcon}>
+                    <Image
+                      src="/icons/play.png"
+                      alt="googleplay"
+                      width={20}
+                      height={20}
+                    />
+                  </a>
+                </div>
+                <button className={styles.languageButton}>
                   <Image
-                    src="/icons/facebook.png"
-                    alt="facebook"
-                    width={20}
-                    height={20}
+                    src="/icons/globe.png"
+                    alt="globe"
+                    width={24}
+                    height={24}
+                    className={styles.languageIcon}
                   />
-                </a>
-                <a href="#" className={styles.footerSocialIcon}>
+                  <span className={styles.languageText}>한국어</span>
                   <Image
-                    src="/icons/naver.png"
-                    alt="naver"
-                    width={20}
-                    height={20}
+                    src="/icons/Button-Next-slide.png"
+                    alt="arrow"
+                    width={14}
+                    height={14}
+                    className={styles.languageArrow}
                   />
-                </a>
-                <a href="#" className={styles.footerSocialIcon}>
-                  <Image
-                    src="/icons/instagram.png"
-                    alt="instagram"
-                    width={20}
-                    height={20}
-                  />
-                </a>
-                <a href="#" className={styles.footerSocialIcon}>
-                  <Image
-                    src="/icons/youtube.png"
-                    alt="youtube"
-                    width={20}
-                    height={20}
-                  />
-                </a>
-              </div>
-              <div className={styles.footerDivider}></div>
-              <div className={styles.footerAppIcons}>
-                <a href="#" className={styles.footerAppIcon}>
-                  <Image
-                    src="/icons/apple.png"
-                    alt="appstore"
-                    width={20}
-                    height={20}
-                  />
-                </a>
-                <a href="#" className={styles.footerAppIcon}>
-                  <Image
-                    src="/icons/play.png"
-                    alt="googleplay"
-                    width={20}
-                    height={20}
-                  />
-                </a>
-              </div>
-              <button className={styles.languageButton}>
-                <Image
-                  src="/icons/globe.png"
-                  alt="globe"
-                  width={24}
-                  height={24}
-                  className={styles.languageIcon}
-                />
-                <span className={styles.languageText}>한국어</span>
-                <Image
-                  src="/icons/Button-Next-slide.png"
-                  alt="arrow"
-                  width={14}
-                  height={14}
-                  className={styles.languageArrow}
-                />
-              </button>
+                </button>
               </div>
             </div>
             <div className={styles.footerCompanyInfo}>
@@ -279,8 +292,7 @@ export default function Layout({ children }: LayoutProps) {
                   상품, 판매자 정보, 이벤트 정보, 디자인, UI 등을 포함한 일체의
                   콘텐츠에 대한 무단 복제, 배포, 전송, 스크래핑 등의 행위는
                   저작권법 등 관련 법령에 의하여 엄격
-                  <br />
-                  히 금지됩니다.
+                  <br />히 금지됩니다.
                 </span>
                 <Image
                   src="/icons/Button-ISMS-P.png"

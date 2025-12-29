@@ -172,6 +172,19 @@
 .navLink:nth-child(9) {
 }
 
+.navLinkActive {
+  position: relative;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 25px;
+  height: 2px;
+  background-color: #2b96ed;
+}
+
 .newIcon {
   display: flex;
   width: 14px;
