@@ -36,6 +36,11 @@
   cursor: pointer;
   margin-right: 24px;
   overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.logoButton:hover {
+  opacity: 0.8;
 }
 
 .logoButton img {
@@ -61,6 +66,13 @@
   background-color: #f5f6f7;
   border-radius: 4px;
   padding: 0 20px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.searchInput:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .searchText {
@@ -90,6 +102,12 @@
   cursor: pointer;
   padding: 0;
   margin-right: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.partnerButton:hover {
+  background-color: #f5f6f7;
+  color: #495056;
 }
 
 .loginButton {
@@ -109,6 +127,12 @@
   color: #ffffff;
   cursor: pointer;
   padding: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.loginButton:hover {
+  background-color: #2380d1;
+  transform: translateY(-1px);
 }
 
 .bottomNav {
@@ -143,6 +167,11 @@
   text-decoration: none;
   white-space: nowrap;
   padding-right: 25px;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #2b96ed;
 }
 
 .navLinkText {
@@ -340,6 +369,13 @@
   color: #495056;
   cursor: pointer;
   padding: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.inquiryButton:hover {
+  background-color: #f5f6f7;
+  border-color: #adb5bd;
+  transform: translateY(-1px);
 }
 
 .footerLinks {
@@ -388,6 +424,12 @@
   color: #666d75;
   text-decoration: none;
   border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.footerLinkItem:hover {
+  color: #2b96ed;
+  background-color: #f5f6f7;
 }
 
 .footerLinkSection:nth-child(2) .footerLinkItem {
@@ -437,6 +479,11 @@
   color: #666d75;
   text-decoration: none;
   border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.footerBottomLink:hover {
+  color: #2b96ed;
 }
 
 .footerBottomLinkBold {
@@ -453,6 +500,11 @@
   color: #666d75;
   text-decoration: none;
   border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.footerBottomLinkBold:hover {
+  color: #2b96ed;
 }
 
 .footerBottomLink:nth-child(3) {
@@ -480,6 +532,12 @@
   width: 20px;
   height: 44px;
   text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footerSocialIcon:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .footerDivider {
@@ -502,6 +560,12 @@
   width: 20px;
   height: 44px;
   text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footerAppIcon:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .languageButton {
@@ -517,6 +581,12 @@
   border-radius: 4px;
   cursor: pointer;
   padding: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.languageButton:hover {
+  background-color: #f5f6f7;
+  border-color: #adb5bd;
 }
 
 .languageIcon {
@@ -795,6 +865,11 @@
     font-size: 14px;
     cursor: pointer;
     padding: 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .mobileMenuLoginButton:hover {
+    background-color: #2380d1;
   }
 
   .mobileMenuPartnerButton {
@@ -813,6 +888,12 @@
     font-size: 14px;
     cursor: pointer;
     padding: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .mobileMenuPartnerButton:hover {
+    background-color: #f5f6f7;
+    border-color: #adb5bd;
   }
 
   .mobileSearchOverlay {

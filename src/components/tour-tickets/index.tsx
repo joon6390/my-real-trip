@@ -115,6 +115,7 @@ export default function TourTickets() {
                 width={1020}
                 height={170}
                 className={styles.adBackground}
+                priority
               />
               <div className={styles.adOverlay}></div>
             </div>
