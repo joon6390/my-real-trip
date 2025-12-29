@@ -2,3 +2,7 @@
 
 Cursor AI를 활용하여 유명 여행 플랫폼 마이리얼트립의 투어-티켓 홈 UI를 Figma 디자인을 그대로 퍼블리싱하였습니다.  
 반응형/모바일 Figma는 가지고 있지 않기에 임의대로 구현하였습니다.
+
+# 완성본 보기
+
+https://my-real-trip-five.vercel.app/tour-tickets
