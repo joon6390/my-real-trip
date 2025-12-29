@@ -20,6 +20,24 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
   },
+  openGraph: {
+    title: "마이리얼트립: 퍼블리싱",
+    description: "마이리얼트립 퍼블리싱",
+    images: [
+      {
+        url: "https://my-real-trip-five.vercel.app/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "마이리얼트립 로고",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "마이리얼트립: 퍼블리싱",
+    description: "마이리얼트립 퍼블리싱",
+    images: ["https://my-real-trip-five.vercel.app/images/logo.png"],
+  },
 };
 
 export default function RootLayout({
