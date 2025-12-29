@@ -20,6 +20,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (max-width: 857px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

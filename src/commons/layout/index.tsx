@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -12,10 +12,28 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname();
   const isTourTicketsPage = pathname === "/tour-tickets";
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   return (
     <div className={styles.container}>
+      {isMenuOpen && (
+        <div
+          className={styles.mobileMenuOverlay}
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
       <header className={styles.header}>
         <div className={styles.topNav}>
+          <button
+            className={styles.hamburgerButton}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="메뉴"
+          >
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+          </button>
           <button className={styles.logoButton}>
             <Image
               src="/images/logo.png"
@@ -40,6 +58,18 @@ export default function Layout({ children }: LayoutProps) {
           </div>
           <button className={styles.partnerButton}>파트너 로그인</button>
           <button className={styles.loginButton}>로그인 및 회원가입</button>
+          <button
+            className={styles.mobileSearchButton}
+            onClick={() => setIsSearchOpen(true)}
+            aria-label="검색"
+          >
+            <Image
+              src="/icons/search-gray.png"
+              alt="search"
+              width={20}
+              height={20}
+            />
+          </button>
         </div>
         <div className={styles.bottomNav}>
           <div className={styles.navLinks}>
@@ -65,17 +95,18 @@ export default function Layout({ children }: LayoutProps) {
             <a href="#" className={styles.navLink}>
               국내 숙소
             </a>
-            <a
-              href="/tour-tickets"
-              className={`${styles.navLink} ${
-                isTourTicketsPage ? styles.navLinkActive : ""
-              }`}
-            >
-              투어·티켓
-              {isTourTicketsPage && (
+            {isTourTicketsPage ? (
+              <div className={styles.navLinkActive}>
+                <a href="/tour-tickets" className={styles.navLink}>
+                  <span className={styles.navLinkText}>투어·티켓</span>
+                </a>
                 <span className={styles.activeIndicator}></span>
-              )}
-            </a>
+              </div>
+            ) : (
+              <a href="/tour-tickets" className={styles.navLink}>
+                투어·티켓
+              </a>
+            )}
             <a href="#" className={styles.navLink}>
               해외여행보험
             </a>
@@ -105,6 +136,46 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </header>
+      {isMenuOpen && (
+        <div className={styles.mobileMenuSidebar}>
+          <button className={styles.mobileMenuLogoButton}>
+            <Image
+              src="/images/logo.png"
+              alt="myrealtrip"
+              width={128}
+              height={27}
+              priority
+            />
+          </button>
+          <button className={styles.mobileMenuLoginButton}>
+            로그인 및 회원가입
+          </button>
+          <button className={styles.mobileMenuPartnerButton}>
+            파트너 로그인
+          </button>
+        </div>
+      )}
+      {isSearchOpen && (
+        <>
+          <div
+            className={styles.mobileSearchOverlay}
+            onClick={() => setIsSearchOpen(false)}
+          ></div>
+          <div className={styles.mobileSearchModal}>
+            <div className={styles.mobileSearchInput}>
+              <span className={styles.searchText}>
+                &quot;EPL 공식&quot; 기간 한정 쿠폰(~7/22)
+              </span>
+              <Image
+                src="/icons/search-gray.png"
+                alt="search"
+                width={20}
+                height={20}
+              />
+            </div>
+          </div>
+        </>
+      )}
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>

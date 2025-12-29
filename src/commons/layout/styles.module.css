@@ -35,6 +35,12 @@
   padding: 0;
   cursor: pointer;
   margin-right: 24px;
+  overflow: hidden;
+}
+
+.logoButton img {
+  display: block;
+  object-fit: contain;
 }
 
 .searchContainer {
@@ -139,6 +145,36 @@
   padding-right: 25px;
 }
 
+.navLinkText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navLinkActive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 25px;
+  justify-content: center;
+  height: 50px;
+}
+
+.navLinkActive .navLink {
+  padding-right: 0;
+  padding-bottom: 0;
+  align-self: stretch;
+  flex: 0 0 auto;
+}
+
+.activeIndicator {
+  display: flex;
+  width: 100%;
+  height: 2px;
+  background-color: #2b96ed;
+  margin-top: 5px;
+}
+
 .navLink:first-child {
   font-size: 16px;
   line-height: 19.363636016845703px;
@@ -172,15 +208,9 @@
 .navLink:nth-child(9) {
 }
 
-.navLinkActive {
-  position: relative;
-}
-
 .activeIndicator {
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 25px;
+  display: flex;
+  width: 100%;
   height: 2px;
   background-color: #2b96ed;
 }
@@ -200,7 +230,7 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  height: 50px;
+  height: 25px;
   background: none;
   border: none;
   font-family: Inter, sans-serif;
@@ -584,4 +614,395 @@
   margin-left: 4px;
   align-self: flex-start;
   margin-top: -6px;
+}
+
+.mobileMenuBar {
+  display: none;
+}
+
+.mobileSearchButton {
+  display: none;
+}
+
+.hamburgerButton {
+  display: none;
+}
+
+.mobileMenuDropdown {
+  display: none;
+}
+
+.mobileMenuOverlay {
+  display: none;
+}
+
+.mobileMenuSidebar {
+  display: none;
+}
+
+.mobileSearchOverlay {
+  display: none;
+}
+
+.mobileSearchModal {
+  display: none;
+}
+
+/* 반응형 스타일 */
+/* 768px까지: 비율 기반 반응형 */
+@media (max-width: 1200px) {
+  .topNav {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .searchContainer {
+    width: calc(100% - 600px);
+    max-width: 326px;
+    margin-right: auto;
+  }
+
+  .navLinks {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .footerContent {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topNav {
+    padding: 0 16px;
+  }
+
+  .searchContainer {
+    width: calc(100% - 500px);
+    max-width: 300px;
+  }
+
+  .navLinks {
+    padding: 0 16px;
+  }
+
+  .footerContent {
+    padding: 0 16px;
+  }
+}
+
+/* 858px 미만: 모바일 레이아웃 */
+@media (max-width: 857px) {
+  .container {
+    overflow-x: hidden;
+  }
+
+  .topNav {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+    min-height: 60px;
+  }
+
+  .hamburgerButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 3;
+    flex: 0 0 auto;
+  }
+
+  .hamburgerLine {
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+  }
+
+  .mobileMenuOverlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .mobileMenuSidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 24px 20px;
+    gap: 16px;
+    overflow-y: auto;
+  }
+
+  .mobileMenuLogoButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+
+  .mobileMenuLogoButton img {
+    display: block;
+    object-fit: contain;
+  }
+
+  .mobileMenuLoginButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2b96ed;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobileMenuPartnerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #666d75;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobileSearchOverlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  .mobileSearchModal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 32px);
+    max-width: 400px;
+    z-index: 999;
+  }
+
+  .mobileSearchInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .logoButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 0;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .logoButton img {
+    display: block;
+    object-fit: contain;
+  }
+
+  .searchContainer {
+    display: none;
+  }
+
+  .mobileSearchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+    z-index: 1;
+    margin-left: auto;
+  }
+
+  .partnerButton,
+  .loginButton {
+    display: none;
+  }
+
+  .header {
+    height: auto;
+    min-height: 60px;
+  }
+
+  .bottomNav {
+    display: none;
+  }
+
+  .navLinks {
+    padding: 0 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  .navLink {
+    font-size: 13px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+  }
+
+  .footer {
+    height: auto;
+    min-height: auto;
+  }
+
+  .footerContent {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0 16px;
+  }
+
+  .footerTop {
+    flex-direction: column;
+    padding-top: 32px;
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+
+  .customerSupport {
+    width: 100%;
+  }
+
+  .footerLinks {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footerLinkSection {
+    width: auto;
+    min-width: 120px;
+  }
+
+  .footerBottomLinksRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footerSocialApps {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .footerSocialIcons {
+    gap: 20px;
+  }
+
+  .footerBottomLinks {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footerCompanyInfoRow,
+  .footerCompanyInfoRowSecond {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .footerCompanyInfoRowLast {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footerCompanyInfoRowLastText {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .footerIsmsImage {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .footerBottom {
+    margin-bottom: 20px;
+  }
+
+  .footerCompanyInfo {
+    margin-bottom: 20px;
+  }
+
+  .footerCompanyInfoRowLast {
+    margin-bottom: 40px;
+  }
 }

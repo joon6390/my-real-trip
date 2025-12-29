@@ -393,7 +393,7 @@ export default function TourTickets() {
             <a href="#" className={styles.ticketCard}>
               <div className={styles.ticketCardImageWrapper}>
                 <Image
-                  src="/images/Image15.png"
+                  src="/images/image.png"
                   alt="EPL 티켓"
                   width={250}
                   height={166}
